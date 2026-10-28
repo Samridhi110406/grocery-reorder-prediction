@@ -1,0 +1,43 @@
+{
+    "features": [
+        "purchase_count",
+        "purchase_share",
+        "orders_since_last_purchase",
+        "user_total_prior_orders",
+        "user_avg_days_between_orders",
+        "product_total_purchases",
+        "product_reorder_rate"
+    ],
+    "target": "label",
+    "model_type": "LGBMClassifier",
+    "params": {
+        "boosting_type": "gbdt",
+        "class_weight": null,
+        "colsample_bytree": 0.8,
+        "importance_type": "split",
+        "learning_rate": 0.05,
+        "max_depth": -1,
+        "min_child_samples": 20,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "n_estimators": 3000,
+        "n_jobs": -1,
+        "num_leaves": 31,
+        "objective": "binary",
+        "random_state": 42,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.0,
+        "subsample": 0.8,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 1,
+        "verbosity": -1
+    },
+    "best_iteration": 619,
+    "validation_metrics": {
+        "Users": 18455.0,
+        "recall_at_5": 0.39968682992539956,
+        "precision_at_5": 0.4059848279599025,
+        "recall_at_10": 0.5744487206535884,
+        "precision_at_10": 0.32404430768966125
+    }
+}
